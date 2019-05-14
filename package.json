@@ -1,0 +1,27 @@
+{
+  "name": "dating-app",
+  "version": "1.0.0",
+  "description": "A feature for a dating-app",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harmvv/pt-course-18-19.git"
+  },
+  "keywords": [
+    "dating",
+    "app"
+  ],
+  "author": "Harm van Verseveld",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harmvv/pt-course-18-19/issues"
+  },
+  "homepage": "https://github.com/harmvv/pt-course-18-19#readme"
+}
