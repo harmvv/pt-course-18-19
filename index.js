@@ -1,3 +1,7 @@
+/*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
+/*eslint-env browser*/
+/*eslint 'no-console':0*/
+
 console.log("server werkt");
 var express = require('express');
 var app = express();
@@ -26,3 +30,4 @@ reply += "ik heb " + data.search + " gezocht"
     }
     response.send(reply)
 };
+

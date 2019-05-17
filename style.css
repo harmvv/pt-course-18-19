@@ -144,3 +144,7 @@ margin-right:auto;}
 .liever .input2images {display:flex;
     justify-content: space-between;}
 .liever .input2images img {height:27%;}
+
+input:checked + label img {
+    border: 5px solid #9ABE22;
+}
