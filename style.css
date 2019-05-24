@@ -26,6 +26,9 @@ header a {
     margin: 5px;
     font-weight: 700;
 }
+nav img{
+    width:40px;
+}
 
 header li a {
     text-decoration: none;
