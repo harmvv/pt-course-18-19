@@ -7,6 +7,7 @@ For the whole proces see the wiki : https://github.com/harmvv/pt-course-18-19/wi
 ## Build with
 
 * [Express](https://expressjs.com/) is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+* [Mongodb](https://www.mongodb.com/) Access data directly from your frontend code, intelligently distribute data for global apps, trigger serverless functions in response to data changes, and much more.
 * [Handlebars](https://handlebarsjs.com/) provides the power necessary to let you build semantic templates effectively with no frustration.
 
 ## How to install this project
