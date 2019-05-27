@@ -27,6 +27,6 @@ This will install al the needed packages from NPM
 
 ### Run the server
 ```bash
-npm start 
+Node index.js
 ```
 
