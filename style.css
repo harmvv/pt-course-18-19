@@ -10,6 +10,46 @@ nav li a {
     width: 60px;
 }
 
+.hamburgernav{
+    display:none;
+    position:absolute;
+    background-color: #9ABE22;
+    height:100%;
+    width:100%;
+    margin-top:0px;
+}
+
+button.close{
+    font-size:2em;
+    color:white;
+    background-color:orange;
+    border-radius: 50%;
+    margin-top:5px;
+    padding: 10px;
+    float:right;
+    margin-right:10px
+}
+
+.hamburgerdiv {
+    display: flex;
+}
+.hamburgerul{
+  display:block;
+  list-style: none; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hamburgerul li {
+    font-size:2em;
+    color:white;
+    margin-top:20px;
+    text-align: center;
+}
+
+ .hamburgerul .iconbucket{
+     width:100px;
+ }
 header {
     /*    position: fixed;*/
     display: block;
@@ -69,10 +109,9 @@ ul.ulnav {
    
 }
 .title button{
-margin-left:60px;
 padding: 10px 10px;
 border-radius: 20%;
-margin: auto auto auto 80px;
+margin: auto auto auto 30vw;
 background-color: #43a4cf;
 color: white;
 font-size:20px;
