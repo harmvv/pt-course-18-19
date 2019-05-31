@@ -270,6 +270,13 @@ h2.timelinetitle {
    
 }
 
+.title h1{
+    color: #9ABE22;
+    font-size:2em;
+    margin-bottom:-15px;
+   
+}
+
 .matchprofiel{
 background-color:#43a4cf;
 margin:0px;
