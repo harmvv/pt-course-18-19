@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Applicatie onderdeel</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -19,47 +20,92 @@
         </nav>
     </header>
     <main>
-        <div class="title">
-            <h1>The Bucktest</h1>
-            <h2>Wat heeft jouw voorkeur?</h2>
+        <div class="title" id="titlematches">
+            <h1>Jouw Profiel</h1>
+            <div>
+                <button>Zoek matches</button>
         </div>
-        <form class="buckettest" action="index.html" method="get">
-            <div class="omgeving">
-
-                <h4>Omgeving</h4>
-                <div class="formcontainer">
-                    <div class="forminput">
-                      <div class="input2images"> 
-                        <input type="radio" name="Vacation" value="beach" id="beach1">
-                        <label for="beach1"><img src="images/beachsun.png"></label>
-                        <input type="radio" name="Vacation" value="winter" id="winter2">
-                        <label class="labelwinter2" for="winter2"><img class="winterimg2" src="images/winter.png"></label>
-                        <input type="radio" name="Vacation" value="jungle" id="jungle3">
-                        <label for="jungle3"><img src="images/jungle.png"></label>
-                    </div>
-                    </div>
-                </div>
+    </div>
+      
+      <div id="jouwprofiel">
+          <h5><strong>Herman Janssen</strong> - Lid sinds 2017</h5>
+          <div class="profielcontainer">
+          <div>
+              <img src="images/profile/jouwprofielfoto.png"> 
             </div>
-            <div class="liever">
-
-                <h4>Wat doe je liever</h4>
-                <div class="formcontainer">
-                    <div class="forminput">
-                        <div class="input2images">
-                        <img src="images/beachsun.png">
-
-                        <img src="images/jungle.png">
-                        </div>
-                        <div class="slidecontainer">
-                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                        </div>
-                    </div>
-                </div>
+            <div class="profielinfo">
+              <p>Jij bent een <strong>ontdekker</strong></p>
+              <p>Jij zoek teen ontdekker of een avondturier</p>
+              <a> Instellingen</a>
+              <a class="bekijkbucketlist">Bekijk bucketlist</a>
+          </div>
+        </div>
+      </div>
+      
+    <section class="timeline">
+      <h2 class="timelinetitle">Timeline</h2>
+<h2>Bekijk de status van jouw matches</h2>
+      
+<div class="matchprofiel">
+        <h5><strong>Herman Janssen</strong> - Lid sinds 2017</h5>
+        <div class="profielcontainer">
+        <div>
+            <img src="images/profile/jouwprofielfoto.png"> 
+          </div>
+          <div class="profielinfo">
+            <p>Ik wil graag de Mount Everest is een keer beklimmen
+                </p>
+            <a> Reageer</a>
+            <a class="bekijkbucketlist">Bekijk bucketlist</a>
+        </div>
+      </div>
+    </div>
+    <div class="matchprofiel">
+            <h5><strong>Herman Janssen</strong> - Lid sinds 2017</h5>
+            <div class="profielcontainer">
+            <div>
+                <img src="images/profile/jouwprofielfoto.png"> 
+              </div>
+              <div class="profielinfo">
+                <p>Ik wil graag de Mount Everest is een keer beklimmen
+                    </p>
+                <a> Reageer</a>
+                <a class="bekijkbucketlist">Bekijk bucketlist</a>
             </div>
+          </div>
+        </div>
+        <div class="matchprofiel">
+                <h5><strong>Herman Janssen</strong> - Lid sinds 2017</h5>
+                <div class="profielcontainer">
+                <div>
+                    <img src="images/profile/jouwprofielfoto.png"> 
+                  </div>
+                  <div class="profielinfo">
+                    <p>Ik wil graag de Mount Everest is een keer beklimmen
+                        </p>
+                    <a> Reageer</a>
+                    <a class="bekijkbucketlist">Bekijk bucketlist</a>
+                </div>
+              </div>
+            </div>
+            <div class="matchprofiel">
+                    <h5><strong>Herman Janssen</strong> - Lid sinds 2017</h5>
+                    <div class="profielcontainer">
+                    <div>
+                        <img src="images/profile/jouwprofielfoto.png"> 
+                      </div>
+                      <div class="profielinfo">
+                        <p>Ik wil graag de Mount Everest is een keer beklimmen
+                            </p>
+                        <a> Reageer</a>
+                        <a class="bekijkbucketlist">Bekijk bucketlist</a>
+                    </div>
+                  </div>
+                </div>
 
-            <br>
-            <input id="submitbutton" type="submit" value="Submit">
-        </form>
+</section>
+      
+       
     </main>
 </body>
 
