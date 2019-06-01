@@ -58,31 +58,57 @@
         </nav>
     </header>
     <main>
-        <div class="title" >
-            <h1>Zoek nieuwe matches</h1>
-           <h2>Swipe naar rechts voor liken</h2>
+        <div class="title" id="titlematches">
+            <h1>Jouw Profiel</h1>
+            <div>
+                <button>Zoek matches</button>
+        </div>
     </div>
-      
+      <div id="jouwprofiel">
 
-    <div class="searchmatch">
-<div class=searchmatchtitle">
-  <h5><strong>Loes</strong> - Verkenner</h5>
-  <p>Instellingen</p>
-</div>
-<img src="images/profile/jouwprofielfoto.png">
-<p>2KM bij jou vandaan</p>
-<h6>Ik wil graag een keer de Mount Everst beklimmen</h6>
-<a class="bekijkbucketlist">Bekijk bucketlist</a>
-<div class="likedislike">
-  <p>Like</p>
-  <p>Dislike</p>
-</div>
-    </div>
-     
+      </div>
+   
+   <script type="text/javascript">
+    
+   var profielInfo = '<h5><strong>{{naam}}</strong> - Lid sinds {{lidSinds}}</h5> <div class="profielcontainer"> <div>  <img src="{{profielFotoUrl}}">  </div><div class="profielinfo"><p>Jij bent een <strong>{{type}}</strong></p> <p>Jij zoekt een {{zoekType}}</p> <a> Instellingen</a> <a class="bekijkbucketlist">Bekijk bucketlist</a></div> </div>'
+   var template = Handlebars.compile(profielInfo);
 
+   var data = template (
+       {naam : "Herman Jannsen",
+    plaats : "Hillegom",
+    lidSinds: "2017",
+profielFotoUrl: "images/profile/jouwprofielfoto.png",
+type : "Ontdekker",
+zoekType : "Ontdekker of een Avonturier"
+}
+   );
 
-       
-    </main>
+   document.getElementById("jouwprofiel").innerHTML += data;
+    
+    </script>
+
+<section class="timeline">
+        <h2 class="timelinetitle">Timeline</h2>
+  <h2>Bekijk de status van jouw matches</h2>
+
+  <div class="matchprofiel">
+        <script type="text/javascript">
+    
+            var matchInfo = '<h5><strong>{{naam}}</strong> - Lid sinds {{lidSinds}}</h5><div class="profielcontainer"> <div><img src="{{profielFotoUrl}}">  </div> <div class="profielinfo"> <p>{{doel}}</p><a> Reageer</a><a class="bekijkbucketlist">Bekijk bucketlist</a> </div> </div>'
+            var template = Handlebars.compile(matchInfo);
+         
+               var data = template (
+                {naam : "Loes van Kader",
+             lidSinds: "2017",
+         profielFotoUrl: "images/profile/jouwprofielfoto.png",
+         doel : "Ik wil graag de Mount Everest is een keer beklimmen",
+         }
+            );
+         
+            document.querySelector(".matchprofiel").innerHTML += data;
+             
+             </script>
+  </div>
 </body>
 
 </html>

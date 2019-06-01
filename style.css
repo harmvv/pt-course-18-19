@@ -110,7 +110,7 @@ ul.ulnav {
 }
 .title button{
 padding: 10px 10px;
-border-radius: 20%;
+border-radius: 20px;
 margin: auto auto auto 30vw;
 background-color: #43a4cf;
 color: white;
@@ -273,10 +273,12 @@ h2.timelinetitle {
 .title h1{
     color: #9ABE22;
     font-size:2em;
-    margin-bottom:-15px;
+    margin-bottom:0px;
    
 }
-
+#jouwprofiel{
+    margin-top:25px;
+}
 .matchprofiel{
 background-color:#43a4cf;
 margin:0px;
