@@ -6,6 +6,10 @@
 var express = require('express');
 var path = require("path");
 var exphbs = require("express-handlebars");
+var assert = require("assert");
+var mongo = require ("mongodb");
+
+var url = "mongodb://localhost:27017/bucket/user"
 
 var app = express();
 
@@ -59,13 +63,22 @@ app.get("/", function(req, res){
     res.render("index",{
         content : "Dit is content",
         people : people,
-        profile : profile
+        profile : profile,
+        title : "Home"
     }
     );
 })
 
 app.get("/buckettest", function(req, res){
     res.render("buckettest",{
+        title : "Test"
+       }
+    );
+})
+
+app.get("/:search", function(req, res){
+    res.render("error",{
+        title : "Error"
        }
     );
 })
