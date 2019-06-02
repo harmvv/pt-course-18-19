@@ -292,7 +292,7 @@ margin-top:30px;
     width:100px;
 }
 
-.timeline>.matchprofiel:nth-child(even){
+.timeline .matchprofiel:nth-child(even){
     background-color:#6DC4CD;
 }
 

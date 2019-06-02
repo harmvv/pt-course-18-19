@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="handlebars-v4.1.2.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   
 </head>
 
 <body>
@@ -33,28 +34,7 @@
 
             </ul>
         </div>
-          <script>
-              console.log("hello");
-              var hamburgericon = document.querySelector('.hamburgericon');
-              var close = document.querySelector('.close');
-              function openMenu(){
-                  console.log("hello2")
-                  var x = document.querySelector(".hamburgernav");
-                  var main = document.querySelector("main");
-                  var ulnav = document.querySelector(".ulnav");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-    main.style.display = "block"
-    ulnav.style.display = "flex"
-  } else {
-    x.style.display = "block";
-    main.style.display = "none";
-    ulnav.style.display = "none"
-  }
-              }
-              hamburgericon.addEventListener("click", openMenu);
-              close.addEventListener("click", openMenu);
-          </script>
+        
         </div>
         </nav>
     </header>
@@ -65,7 +45,7 @@
                 <button>Zoek matches</button>
         </div>
     </div>
-   
+   <div class="profielcontainer1"></div>
     <script id="profieltemplate" type="text/x-handlebars-template">
         <div id="jouwprofiel">
                 <h5><strong>{{naam}}</strong> - Lid sinds {{lidSinds}}</h5>
@@ -101,7 +81,7 @@ var templateScript = Handlebars.compile(template);
 var html = templateScript(context);
 
 
-$(document.body).append(html);
+$(".profielcontainer1").append(html);
 </script>
 
 </main>
@@ -109,17 +89,17 @@ $(document.body).append(html);
         <h2 class="timelinetitle">Timeline</h2>
   <h2>Bekijk de status van jouw matches</h2>
 
-<ul class="matchul"></ul>
+<div class="matchul"></div>
 
 <script id="matchestemplate" type="text/x-handlebars-template">
   
   {{#each users}}
-    <li style="list-style-type: none;">
+   
     <div class="matchprofiel">
         <h5><strong>{{naam}}</strong> - Lid sinds {{lidSinds}}</h5>
         <div class="profielcontainer">
         <div>
-            <img src="{{profielFotoUrl}}"> 
+            <img src="images/profile/{{profielFotoUrl}}"> 
           </div>
           <div class="profielinfo">
             <p>{{wilGraag}}
@@ -129,43 +109,10 @@ $(document.body).append(html);
         </div>
       </div>
     </div>
-</li>
+
 {{/each}}
 </script>
-<script>
-        //Retrieve the template data from the HTML .
-        var template = $('#matchestemplate').html();
-        
-        var context = 
-        {
-        "users" : [
-            {
-             "naam" : "Herman janssen",
-         "lidSinds" : "2017" ,
-         "type" : "Ontdekker",
-         "profielFotoUrl":  "images/profile/jouwprofielfoto.png",
-         "zoekType" : "ontdekker of een avondturier",
-         "wilGraag" : "Ik wil graag de Mount Everest is een keer beklimmen"
-        },
-        {
-            "naam" : "Loes van Katen", 
-            "lidSinds" : "2016",
-            "profielFotoUrl": "images/profile/jouwprofielfoto.png",
-            "zoekType" : "Relaxer",
-            "wilGraag" : "Ik wil graag nog eens de Grand Canyon zien"
-        }
-    ]
 
-    }
-        
-        
-        var templateScript = Handlebars.compile(template);
-        
-        var html = templateScript(context);
-        
-        
-        $(document.body).append(html);
-        </script>
 
 
  
@@ -176,6 +123,7 @@ $(document.body).append(html);
 
 
 </section>
+<script src ="javascript/index.js"></script>
 </body>
 
 </html>

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="handlebars-v4.1.2.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   
 </head>
 
 <body>
@@ -32,28 +34,7 @@
 
             </ul>
         </div>
-          <script>
-              console.log("hello");
-              var hamburgericon = document.querySelector('.hamburgericon');
-              var close = document.querySelector('.close');
-              function openMenu(){
-                  console.log("hello2")
-                  var x = document.querySelector(".hamburgernav");
-                  var main = document.querySelector("main");
-                  var ulnav = document.querySelector(".ulnav");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-    main.style.display = "block"
-    ulnav.style.display = "flex"
-  } else {
-    x.style.display = "block";
-    main.style.display = "none";
-    ulnav.style.display = "none"
-  }
-              }
-              hamburgericon.addEventListener("click", openMenu);
-              close.addEventListener("click", openMenu);
-          </script>
+        
         </div>
         </nav>
     </header>
@@ -64,87 +45,85 @@
                 <button>Zoek matches</button>
         </div>
     </div>
-      
-      <div id="jouwprofiel">
-          <h5><strong>Herman Janssen</strong> - Lid sinds 2017</h5>
-          <div class="profielcontainer">
-          <div>
-              <img src="images/profile/jouwprofielfoto.png"> 
+   <div class="profielcontainer1"></div>
+    <script id="profieltemplate" type="text/x-handlebars-template">
+        <div id="jouwprofiel">
+                <h5><strong>{{naam}}</strong> - Lid sinds {{lidSinds}}</h5>
+                <div class="profielcontainer">
+                <div>
+                    <img src="{{profielFotoUrl}}"> 
+                  </div>
+                  <div class="profielinfo">
+                    <p>Jij bent een <strong>{{type}}</strong></p>
+                    <p>Jij zoekt een {{zoekType}}</p>
+                    <a> Instellingen</a>
+                    <a class="bekijkbucketlist">Bekijk bucketlist</a>
+                </div>
+              </div>
             </div>
-            <div class="profielinfo">
-              <p>Jij bent een <strong>ontdekker</strong></p>
-              <p>Jij zoek teen ontdekker of een avondturier</p>
-              <a> Instellingen</a>
-              <a class="bekijkbucketlist">Bekijk bucketlist</a>
-          </div>
-        </div>
-      </div>
-      
-    <section class="timeline">
-      <h2 class="timelinetitle">Timeline</h2>
-<h2>Bekijk de status van jouw matches</h2>
-      
-<div class="matchprofiel">
-        <h5><strong>Herman Janssen</strong> - Lid sinds 2017</h5>
+            </script>
+    </script>
+<script>
+//Retrieve the template data from the HTML .
+var template = $('#profieltemplate').html();
+
+var context = {
+     "naam" : "Herman janssen",
+ "lidSinds" : "2017" ,
+ "type" : "Ontdekker",
+ "profielFotoUrl":  "images/profile/jouwprofielfoto.png",
+ "zoekType" : "ontdekker of een avondturier"
+};
+
+
+var templateScript = Handlebars.compile(template);
+
+var html = templateScript(context);
+
+
+$(".profielcontainer1").append(html);
+</script>
+
+</main>
+<section class="timeline">
+        <h2 class="timelinetitle">Timeline</h2>
+  <h2>Bekijk de status van jouw matches</h2>
+
+<div class="matchul"></div>
+
+<script id="matchestemplate" type="text/x-handlebars-template">
+  
+  {{#each users}}
+   
+    <div class="matchprofiel">
+        <h5><strong>{{naam}}</strong> - Lid sinds {{lidSinds}}</h5>
         <div class="profielcontainer">
         <div>
-            <img src="images/profile/jouwprofielfoto.png"> 
+            <img src="images/profile/{{profielFotoUrl}}"> 
           </div>
           <div class="profielinfo">
-            <p>Ik wil graag de Mount Everest is een keer beklimmen
+            <p>{{wilGraag}}
                 </p>
             <a> Reageer</a>
             <a class="bekijkbucketlist">Bekijk bucketlist</a>
         </div>
       </div>
     </div>
-    <div class="matchprofiel">
-            <h5><strong>Herman Janssen</strong> - Lid sinds 2017</h5>
-            <div class="profielcontainer">
-            <div>
-                <img src="images/profile/jouwprofielfoto.png"> 
-              </div>
-              <div class="profielinfo">
-                <p>Ik wil graag de Mount Everest is een keer beklimmen
-                    </p>
-                <a> Reageer</a>
-                <a class="bekijkbucketlist">Bekijk bucketlist</a>
-            </div>
-          </div>
-        </div>
-        <div class="matchprofiel">
-                <h5><strong>Herman Janssen</strong> - Lid sinds 2017</h5>
-                <div class="profielcontainer">
-                <div>
-                    <img src="images/profile/jouwprofielfoto.png"> 
-                  </div>
-                  <div class="profielinfo">
-                    <p>Ik wil graag de Mount Everest is een keer beklimmen
-                        </p>
-                    <a> Reageer</a>
-                    <a class="bekijkbucketlist">Bekijk bucketlist</a>
-                </div>
-              </div>
-            </div>
-            <div class="matchprofiel">
-                    <h5><strong>Herman Janssen</strong> - Lid sinds 2017</h5>
-                    <div class="profielcontainer">
-                    <div>
-                        <img src="images/profile/jouwprofielfoto.png"> 
-                      </div>
-                      <div class="profielinfo">
-                        <p>Ik wil graag de Mount Everest is een keer beklimmen
-                            </p>
-                        <a> Reageer</a>
-                        <a class="bekijkbucketlist">Bekijk bucketlist</a>
-                    </div>
-                  </div>
-                </div>
+
+{{/each}}
+</script>
+
+
+
+ 
+
+
+
+
+
 
 </section>
-      
-       
-    </main>
+<script src ="javascript/index.js"></script>
 </body>
 
 </html>

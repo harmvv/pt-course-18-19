@@ -1,0 +1,17 @@
+db.user.insertOne(
+    {
+         "naam" : "Loes van Katen", 
+      "lidSinds" : "2016",
+      "profielFotoUrl": "loes.png",
+      "type" : "Ontdekker",
+      "zoekType" : "Relaxer",
+      "wilGraag" : "Ik wil graag nog eens de Grand Canyon zien"
+    }
+)
+
+
+
+
+
+
+db.users.find() 
