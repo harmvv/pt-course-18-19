@@ -91,13 +91,14 @@ zoekType : "Ontdekker of een Avonturier"
         <h2 class="timelinetitle">Timeline</h2>
   <h2>Bekijk de status van jouw matches</h2>
 
-  <div class="matchprofiel">
+  <div class="matchestimeline">
+
         <script type="text/javascript">
     
-            var matchInfo = '<h5><strong>{{naam}}</strong> - Lid sinds {{lidSinds}}</h5><div class="profielcontainer"> <div><img src="{{profielFotoUrl}}">  </div> <div class="profielinfo"> <p>{{doel}}</p><a> Reageer</a><a class="bekijkbucketlist">Bekijk bucketlist</a> </div> </div>'
-            var template = Handlebars.compile(matchInfo);
+            var matchInfo = '<div class="matchprofiel"><h5><strong>{{naam}}</strong> - Lid sinds {{lidSinds}}</h5><div class="profielcontainer"> <div><img src="{{profielFotoUrl}}">  </div> <div class="profielinfo"> <p>{{doel}}</p><a> Reageer</a><a class="bekijkbucketlist">Bekijk bucketlist</a> </div> </div></div>'
+            var matchestemplate = Handlebars.compile(matchInfo);
          
-               var data = template (
+               var data = matchestemplate (
                 {naam : "Loes van Kader",
              lidSinds: "2017",
          profielFotoUrl: "images/profile/jouwprofielfoto.png",
@@ -105,7 +106,7 @@ zoekType : "Ontdekker of een Avonturier"
          }
             );
          
-            document.querySelector(".matchprofiel").innerHTML += data;
+            document.querySelector(".matchestimeline").innerHTML += data;
              
              </script>
   </div>
