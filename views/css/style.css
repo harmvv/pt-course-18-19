@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+nav li a {
+    width: 60px;
+}
+
+.hamburgernav{
+    display:none;
+    position:absolute;
+    background-color: #9ABE22;
+    height:100%;
+    width:100%;
+    margin-top:0px;
+}
+
+button.close{
+    font-size:2em;
+    color:white;
+    background-color:orange;
+    border-radius: 50%;
+    margin-top:5px;
+    padding: 10px;
+    float:right;
+    margin-right:10px
+}
+
+.hamburgerdiv {
+    display: flex;
+}
+.hamburgerul{
+  display:block;
+  list-style: none; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hamburgerul li {
+    font-size:2em;
+    color:white;
+    margin-top:20px;
+    text-align: center;
+}
+
+ .hamburgerul .iconbucket{
+     width:100px;
+ }
+header {
+    /*    position: fixed;*/
+    display: block;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+    /*    border-bottom: 2px solid grey;*/
+    background-color: #9ABE22;
+}
+
+header a {
+    color: white;
+    font-size: 16px;
+    margin: 5px;
+    font-weight: 700;
+}
+nav img{
+    width:40px;
+}
+
+header li a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 50px;
+}
+
+ul.ulnav {
+    margin-top: 0px;
+    padding: 10px;
+}
+
+ul.ulnav {
+    display: flex;
+    list-style: none;
+}
+
+.profilenav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    margin-left: 10px;
+    margin-top:-50px;
+}
+
+#titlematches {
+    margin-left: 10px;
+   display :flex
+}
+
+.title h1 {
+    color: #9ABE22;
+    
+   
+}
+.title button{
+padding: 10px 10px;
+border-radius: 20px;
+margin: auto auto auto 30vw;
+background-color: #43a4cf;
+color: white;
+font-size:20px;
+
+}
+.title div {display:flex;
+   }
+.omgeving {
+    background-color: #43A4CF;
+    margin: 10px;
+}
+
+.liever {
+    background-color: #6DC4CD;
+    margin: 10px;
+}
+
+ .buckettest .omgeving input:not(#submitbutton) {
+    display: none;
+}
+
+main h4 {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.formcontainer {
+    display: flex;
+   
+}
+
+.forminput {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    display: block;
+}
+
+form img {
+    border-radius: 50%;
+    width: 27%;
+    margin: 0.5em;
+}
+
+.slidecontainer {
+  width: 90%; /* Width of the outside container */
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.labelwinter2 {margin-left:auto;
+margin-right:auto;}
+
+.liever .input2images {display:flex;
+    justify-content: space-between;}
+.liever .input2images img {height:27%;}
+
+input:checked + label img {
+    border: 5px solid #9ABE22;
+}
+
+#submitbutton {
+    padding: 10px 80px;
+margin-left: auto;
+margin-right:auto;
+background-color: #9ABE20;
+font-size:20px;
+color: white;
+margin-bottom:20px;
+
+}
+
+.divsubmit {
+    display: flex;
+}
+
+#jouwprofiel{
+background-color:#F9AE1F;
+margin:10px;
+color:white;
+font-size:20px;
+}
+
+#jouwprofiel img {
+    border-radius: 50%;
+    width:100px;
+}
+
+h5 {
+    margin-top:-10px;
+}
+
+.profielcontainer {
+    display: flex;
+}
+
+.profielinfo {
+    margin-left:10px;
+   
+    
+}
+
+.profielinfo p {
+    margin-top:-2px;
+}
+
+.bekijkbucketlist{
+    background-color: grey;
+    margin: 2px 5px;
+}
+
+.timeline{
+    margin: 5px 10px;
+}
+
+h2.timelinetitle {
+    color: #9ABE22;
+    font-size:2em;
+    margin-bottom:-15px;
+   
+}
+
+.title h1{
+    color: #9ABE22;
+    font-size:2em;
+    margin-bottom:0px;
+   
+}
+#jouwprofiel{
+    margin-top:25px;
+}
+.matchprofiel{
+background-color:#43a4cf;
+margin:0px;
+color:white;
+font-size:20px;
+margin-top:30px;
+}
+
+.matchprofiel img{
+    border-radius: 50%;
+    width:100px;
+}
+
+.timeline .matchprofiel:nth-child(even){
+    background-color:#6DC4CD;
+}
+
