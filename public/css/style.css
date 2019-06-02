@@ -41,11 +41,11 @@ button.close{
   margin-right: auto;
 }
 
-.hamburgerul li {
+.hamburgerul li  a{
     font-size:2em;
     color:white;
     margin-top:20px;
-    text-align: center;
+   
 }
 
  .hamburgerul .iconbucket{

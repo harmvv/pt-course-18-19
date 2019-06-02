@@ -56,11 +56,17 @@ var people =
 }
 
 app.get("/", function(req, res){
-    res.render("home",{
+    res.render("index",{
         content : "Dit is content",
         people : people,
         profile : profile
     }
+    );
+})
+
+app.get("/buckettest", function(req, res){
+    res.render("buckettest",{
+       }
     );
 })
 
