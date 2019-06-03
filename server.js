@@ -7,9 +7,39 @@ var express = require('express');
 var path = require("path");
 var exphbs = require("express-handlebars");
 var assert = require("assert");
-var mongo = require ("mongodb");
+var mongo = require("mongodb").MongoClient;
+var router = express.Router();
 
 var url = "mongodb://localhost:27017/bucket/user"
+
+router.get("/get-date", function(req, res, next){
+    
+});
+
+router.get("/insert", function(req, res, next){
+    var resultArray = []
+  mongo.connect(url, function(err, db){
+      assert.equal(null, err);
+      var cursor = db.collection("user").find();
+      cursor.forEach(function(doc, err){
+          assert.equal(null, err);
+          resultArray.push(doc)
+      }, function(){
+          db.close();
+          res.render("index", {items: resultArray});
+      });
+  });
+});
+
+router.get("/update", function(req, res, next){
+    
+});
+
+router.get("/delete", function(req, res, next){
+    
+});
+
+module.exports = router;
 
 var app = express();
 
